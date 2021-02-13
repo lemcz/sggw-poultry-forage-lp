@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const solver = require('javascript-lp-solver');
+const lpSolver = require('./src/calculate-feed-mix');
 
 const router = express.Router();
 const app = express();
@@ -8,18 +8,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-router.post('/api/calculate-feed-mix', (request, response) => {
-  console.log(request.body);
-  response.send({ foo: 'baroo ' });
-
-  //TODO fix this request (accept proper params)
-  try {
-    const result = solver.Solve(request);
-    response.send(result); // sends a response of various types
-  } catch (e) {
-    throw Error(e);
-  }
-});
+// TODO refactor those names
+app.use('/api', lpSolver);
 
 router.get('/', (request, response) => {
   response.send('hello world');
