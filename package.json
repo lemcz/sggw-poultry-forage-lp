@@ -4,6 +4,8 @@
   "description": "BE for sggw-poultry-forage-calculator, allows to run LP problem",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "serve": "nodemon --exec babel-node index.js",
     "test": "1 === 1"
   },
   "keywords": [
@@ -12,8 +14,17 @@
   "author": "Bartosz Lemiec",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "prettier": "^2.2.1",
     "javascript-lp-solver": "^0.4.24"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/node": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
   }
 }
