@@ -1,0 +1,17 @@
+{
+  "name": "sggw-poultry-forage-lp",
+  "version": "0.0.1",
+  "description": "BE for sggw-poultry-forage-calculator, allows to run LP problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "1 === 1"
+  },
+  "keywords": [
+    "lp"
+  ],
+  "author": "Bartosz Lemiec",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
