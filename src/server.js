@@ -1,5 +1,6 @@
-const app = require('../index.js');
 const solver = require('javascript-lp-solver');
+
+const app = require('../index.js');
 
 // TODO finish this and test if it actually works :|
 
