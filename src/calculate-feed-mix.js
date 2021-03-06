@@ -8,14 +8,13 @@ router.post('/calculate-feed-mix', (request, response) => {
   const params = request.body;
   if (!params) {
     // TODO implement responding with bad request here
-    response.send({ foo: 'bar' });
+    response.send({ code: 500, msg: 'Provide params for the calculations' });
     return;
   }
 
   try {
-    const result = solver.Solve(params);
-    console.info('calculated result!', result);
-    response.send(result);
+    const solution = solver.Solve(params);
+    response.send(solution);
   } catch (e) {
     // TODO this is wrong and sends a 200 response with 400 in it...
     response.send({ code: 400, status: e });
