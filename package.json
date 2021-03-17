@@ -1,6 +1,6 @@
 {
   "name": "sggw-poultry-forage-lp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "BE for sggw-poultry-forage-calculator, allows to run LP problem",
   "main": "index.js",
   "scripts": {
